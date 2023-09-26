@@ -1,0 +1,232 @@
+/*====== GOOGLE FONTS ======*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+/*====== VARIABLES ======*/
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --verydark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --verylight-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --fs-small: .95rem;
+  --fs-normal: 1.2rem;
+  --fs-semiBig: 1.5rem;
+  --fs-big: 2rem;
+}
+
+/*====== BASE ======*/
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 62.5%;
+  background-color: var(--light-grayish-cyan);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li, input, button {cursor: pointer;}
+
+/*====== MAIN CLASSES ======*/
+.container {
+  width: 375px;
+}
+
+.header {
+  padding-block: 2rem;
+}
+
+.header img {
+  display: block;
+  margin: 0 auto;
+}
+
+.tip-section {
+  padding: 2rem;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.tip-form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.tip-form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: red;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.tip-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.tip-calc {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--verydark-cyan);
+}
+
+.wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: var(--fs-small);
+  padding-bottom: .3rem;
+  color: var(--dark-grayish-cyan);
+}
+
+.text {
+  padding-block: .3rem;
+  border: 2px solid transparent;
+  background-color: var(--verylight-grayish-cyan);
+  border-radius: 5px;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: var(--fs-semiBig);
+  color: var(--verydark-cyan);
+  outline: none;
+  transition: .3s;
+}
+
+.text:hover, .custom:hover {
+  border: 2px solid var(--strong-cyan);
+}
+
+.tip-item:not(:last-child) {
+  color: var(--white);
+  background-color: var(--verydark-cyan);
+  font-size: var(--fs-normal);
+  padding-block: .5rem;
+  text-align: center;
+  border-radius: 7px;
+  transition: .3s;
+}
+
+.tip-item:not(:last-child):hover {
+  background-color: hsla(172, 67%, 45%, 0.74);
+  color: var(--verydark-cyan);
+}
+
+.active {
+  color: var(--verydark-cyan);
+  background-color: var(--strong-cyan);
+  font-size: var(--fs-normal);
+  padding-block: .5rem;
+  text-align: center;
+  border-radius: 7px;
+  transition: .3s;
+}
+
+.custom {
+  width: 135px;
+  background-color: var(--verylight-grayish-cyan);
+  color: var(--verydark-cyan);
+  font-size: var(--fs-normal);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  padding-block: .5rem;
+  text-align: right;
+  padding-right: 1rem;
+  transition: .3s;
+}
+
+.custom::placeholder {
+  font-size: var(--fs-normal);
+}
+
+.calc-title {
+  font-size: var(--fs-small);
+  color: var(--light-grayish-cyan);
+}
+
+.calc-subtitle {
+  font-size: .75rem;
+  color: var(--grayish-cyan);
+}
+
+.amount {
+  font-size: var(--fs-semiBig);
+  color: var(--strong-cyan);
+}
+
+.button {
+  padding-block: .6rem;
+  font-size: var(--fs-normal);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--strong-cyan);
+  color: var(--verydark-cyan);
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: hsl(172, 82%, 73%);
+}
+
+.dollar {
+  width: 12px;
+  position: absolute;
+  top: 4.7rem;
+  left: 3rem;
+}
+
+.person {
+  width: 14px;
+  position: absolute;
+  top: 26.2rem;
+  left: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .tip-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .tip-calc {
+    padding-block: 3rem;
+    justify-content: space-between;
+  }
+
+  .wrapper {
+    padding-bottom: 2rem;
+  }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

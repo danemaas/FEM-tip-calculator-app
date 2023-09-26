@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header class="header container">
+      <img src="images/logo.svg" alt="" />
+    </header>
+    <main class="container">
+      <section class="tip-section card">
+        <div class="input-section">
+          <form class="tip-form" id="tipForm1">
+            <div>
+              <span class="title">Bill</span>
+              <span class="d-none" id="errorMsg1">Can't be zero</span>
+            </div>
+            <img class="dollar" src="images/icon-dollar.svg" alt="" />
+            <input class="text" type="text" placeholder="0" id="billValue" />
+          </form>
+          <div class="tip-select">
+            <span class="title">Select Tip %</span>
+            <ul class="tip-list">
+              <li class="tip-item" id="tip1">5%</li>
+              <li class="tip-item" id="tip2">10%</li>
+              <li class="tip-item" id="tip3">15%</li>
+              <li class="tip-item" id="tip4">25%</li>
+              <li class="tip-item" id="tip5">50%</li>
+              <input
+                class="custom"
+                type="text"
+                placeholder="Custom"
+                id="customTip"
+              />
+            </ul>
+          </div>
+          <form class="tip-form" id="tipForm2">
+            <div>
+              <span class="title">Number of People</span>
+              <span class="d-none" id="errorMsg2">Can't be zero</span>
+            </div>
+            <img class="person" src="images/icon-person.svg" alt="" />
+            <input class="text" type="text" placeholder="0" id="peopleCount" />
+          </form>
+        </div>
+
+        <div class="tip-calc card">
+          <div>
+            <div class="wrapper">
+              <div>
+                <span class="calc-title">Tip Amount</span>
+                <span class="calc-subtitle">/ person</span>
+              </div>
+              <span class="amount" id="tipAmt">$0.00</span>
+            </div>
+            <div class="wrapper">
+              <div>
+                <span class="calc-title">Total</span>
+                <span class="calc-subtitle">/ person</span>
+              </div>
+              <span class="amount" id="totalAmt">$0.00</span>
+            </div>
+          </div>
+          <button class="button" id="resetBtn">Reset</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Daniel</a>.
+    </footer>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="script.js"></script>
+</html>
